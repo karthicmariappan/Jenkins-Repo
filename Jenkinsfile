@@ -1,7 +1,7 @@
 pipeline{
   agent any
   stages{
-    stage('Build'){
+    stage('Build') {
       steps {
         echo 'Building the project'
       }
@@ -12,7 +12,7 @@ pipeline{
         }
     }
     stage('Deploy') {
-        steps{
+        steps {
             echo 'Deploying the code'
         }
     }
