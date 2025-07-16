@@ -9,6 +9,7 @@ pipeline {
     stages {
         stage('Checkout Code') {
             steps {
+                Checkout scm
                 git 'https://github.com/karthicmariappan/Jenkins-Repo.git'
             }
         }
