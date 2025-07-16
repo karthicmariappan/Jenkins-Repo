@@ -9,8 +9,11 @@ pipeline {
     stages {
         stage('Checkout Code') {
             steps {
-                Checkout scm
-                git 'https://github.com/karthicmariappan/Jenkins-Repo.git'
+                Checkout ([$class: 'Git SCM',
+                           branches:[[name: '*/main']]
+                           userRemoteconfigs:[[
+                                 url:'https://github.com/karthicmariappan/Jenkins-Repo.git']]
+                          ])
             }
         }
 
