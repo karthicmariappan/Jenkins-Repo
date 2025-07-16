@@ -9,11 +9,12 @@ pipeline {
     stages {
         stage('Checkout Code') {
             steps {
-                Checkout ([$class: 'Git SCM',
-                           branches:[[name: '*/main']]
-                           userRemoteconfigs:[[
-                                 url:'https://github.com/karthicmariappan/Jenkins-Repo.git']]
-                          ])
+                Checkout ([$class: 'GitSCM',
+                           branches: [[name: '*/main']],
+                           userRemoteconfigs: [[
+                               url:'https://github.com/karthicmariappan/Jenkins-Repo.git'
+                           ]]
+                ])
             }
         }
 
