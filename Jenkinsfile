@@ -43,12 +43,4 @@ pipeline {
         }
     }
 
-    post {
-        success {
-            echo '✅ Docker image pushed successfully!'
-        }
-        failure {
-            echo '❌ Build failed!'
-        }
-    }
 }
